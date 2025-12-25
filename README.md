@@ -37,6 +37,9 @@ nelli mailbox
 
 Hopefully you'll enjoy what comes next! :3
 
+> [!NOTE]
+> On a special note - if you use different passes for different capsules, you can get a plethora of capsules which all unlock when different ones of these passwords are provided, not revealing them in an instant, at all.
+
 <br>
 
 ## ☘️ Compiling
