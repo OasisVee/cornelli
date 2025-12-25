@@ -8,6 +8,8 @@ $ cargo install nelli
 
 Or, get the goodie from [GitHub Releases](https://github.com/hitblast/cornelli/releases).
 
+<br>
+
 ## 🪄 Usage
 
 Get started by setting a password. You can temporarily set this:
@@ -30,6 +32,8 @@ nelli mailbox
 ```
 
 Hopefully you'll enjoy what comes next! :3
+
+<br>
 
 ## ☘️ Compiling
 
