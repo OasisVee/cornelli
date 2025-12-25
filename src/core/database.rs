@@ -86,9 +86,7 @@ impl ChristmasDB {
         should_be_kept_for: Duration,
     ) -> Result<()> {
         let mut data = text.into_bytes();
-
         let mut nonce = [0u8; 16];
-
         let mut rng = OsRng;
         rng.try_fill_bytes(&mut nonce)?;
 

@@ -34,7 +34,7 @@ async fn main() {
     let db_path = match dirs::config_dir() {
         Some(path) => path.join("cornelli/christmas.json"),
         None => {
-            log_err!("Config directory couldn't be determined, using current directory");
+            log_err!("Config directory couldn't be determined, using current directory...");
             Path::new("christmas.json").to_path_buf()
         }
     };
