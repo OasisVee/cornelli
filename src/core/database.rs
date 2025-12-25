@@ -16,8 +16,8 @@ type Aes256Ctr = ctr::Ctr64BE<Aes256>;
 
 #[derive(Deserialize, Serialize, Clone, PartialEq)]
 pub struct Capsule {
-    data: Vec<u8>,   // ciphertext
-    nonce: [u8; 16], // CTR nonce (must match for decrypt)
+    data: Vec<u8>,
+    nonce: [u8; 16],
     should_be_kept_for: Duration,
     time_added: NaiveDateTime,
 }
