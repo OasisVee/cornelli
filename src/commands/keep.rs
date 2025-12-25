@@ -7,7 +7,6 @@ use anyhow::Result;
 #[derive(Debug, Args)]
 pub struct KeepCmd {
     /// The text to keep.
-    #[arg(short, long)]
     pub text: String,
 
     /// The duration to keep for.
