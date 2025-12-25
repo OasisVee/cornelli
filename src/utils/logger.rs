@@ -25,15 +25,15 @@ pub enum LogLevel {
 
 #[doc(hidden)]
 pub fn _print_log(level: LogLevel, msg: &str) {
-    let (tag, color) = match level {
-        LogLevel::Error => ("Error! ", RED),
-        LogLevel::Sparkles => ("✨️ ", ""),
-        LogLevel::Orb => ("🔮 ", ""),
-        LogLevel::Letter => ("💌 ", ""),
+    let tag = match level {
+        LogLevel::Error => "Error!",
+        LogLevel::Sparkles => "✨️",
+        LogLevel::Orb => "🔮",
+        LogLevel::Letter => "💌",
     };
 
     let line = if level == LogLevel::Error {
-        format!("{color}{tag}{RESET} {msg}")
+        format!("{RED}{tag}{RESET} {msg}")
     } else {
         format!("{tag} {msg}")
     };
