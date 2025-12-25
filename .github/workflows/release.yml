@@ -10,7 +10,7 @@ jobs:
     runs-on: windows-latest
 
     env:
-      FILE_NAME: target/release/nelli-win-latest.zip
+      FILE_NAME: target/release/cornelli-win-latest.zip
 
     steps:
       - name: Checkout
@@ -39,7 +39,7 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     env:
-      FILE_NAME: target/release/trimsec-${{ matrix.os }}.tar.gz
+      FILE_NAME: target/release/cornelli-${{ matrix.os }}.tar.gz
 
     steps:
       - name: Checkout
