@@ -74,7 +74,7 @@ impl ChristmasDB {
         let parent = self
             .path
             .parent()
-            .with_context(|| format!("Cannot create parent directories."))?;
+            .with_context(|| "Cannot create parent directories.".to_string())?;
         fs::create_dir_all(parent).await?;
         fs::write(&self.path, json).await?;
         Ok(())

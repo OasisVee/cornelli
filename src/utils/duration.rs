@@ -19,7 +19,7 @@ pub fn parse_duration(duration: &str) -> Result<ChrDuration> {
             } else {
                 let number: u64 = current_number
                     .parse()
-                    .with_context(|| format!("Negative duration!"))?;
+                    .with_context(|| "Negative duration!".to_string())?;
                 current_number.clear();
                 part_seconds += match c {
                     's' => number,

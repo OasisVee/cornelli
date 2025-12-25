@@ -11,10 +11,8 @@ use std::{
 };
 
 // ANSI color codes.
-pub const RED: &str = "\x1b[31m";
-pub const PINK: &str = "\x1b[35m";
-pub const ORANGE: &str = "\x1b[38;5;208m";
-pub const RESET: &str = "\x1b[0m";
+const RED: &str = "\x1b[31m";
+const RESET: &str = "\x1b[0m";
 
 #[doc(hidden)]
 #[derive(PartialEq, Eq)]
@@ -34,18 +32,18 @@ pub fn _print_log(level: LogLevel, msg: &str) {
         LogLevel::Letter => ("💌 ", ""),
     };
 
-    let line = if level == LogLevel::Sparkles {
-        format!("{tag} {msg}")
-    } else {
+    let line = if level == LogLevel::Error {
         format!("{color}{tag}{RESET} {msg}")
+    } else {
+        format!("{tag} {msg}")
     };
 
     if level == LogLevel::Error {
         eprintln!("{line}");
     } else if level == LogLevel::Orb || level == LogLevel::Sparkles {
-        type_out(&format!("{line}"), 20);
+        type_out(&line.to_string(), 20);
     } else {
-        type_out(&format!("{line}"), 120);
+        type_out(&line.to_string(), 120);
     }
 }
 
