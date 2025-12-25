@@ -1,6 +1,10 @@
 [package]
 name = "cornelli"
 description = "Write to your future self."
+repository = "https://github.com/hitblast/cornelli"
+readme = "README.md"
+license = "MIT"
+keywords = ["christmas", "time-capsule", "time-machine", "notes"]
 version = "1.0.0"
 edition = "2024"
 
