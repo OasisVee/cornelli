@@ -15,7 +15,7 @@ Get started by putting your thoughts away for a certain duration:
 nelli keep "You are doing great, keep going..." -d 20d1h2m1s
 ```
 
-As time goes, you'll eventually be able to check back using the following command:
+As time goes, let this command surprise you once in a while if you feel like it:
 
 ```bash
 nelli mailbox
