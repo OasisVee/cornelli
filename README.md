@@ -1,4 +1,4 @@
-# 🔮 write to your future self! <3
+# 🔮 write to your future self!
 
 cornelli is your small terminal app for the times when you really desire to give your future self pats for the work you do; or for expressing any thoughts to them.
 
