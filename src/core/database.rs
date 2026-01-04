@@ -68,13 +68,13 @@ impl ChristmasDB {
     }
 
     /// Returns the path of the database instance.
-    #[must_use] 
+    #[must_use]
     pub fn path(&self) -> &PathBuf {
         &self.path
     }
 
     /// Returns a reference vector to all capsules.
-    #[must_use] 
+    #[must_use]
     pub fn list_capsules(&self) -> &[Capsule] {
         &self.capsules
     }
@@ -142,6 +142,15 @@ impl ChristmasDB {
     pub async fn remove(&mut self, idx: usize) -> Result<()> {
         self.capsules.remove(idx);
         self.autosave().await?;
+
+        Ok(())
+    }
+
+    /// Removes the entire database instance from memory.
+    pub async fn delete(&self) -> Result<()> {
+        if let Some(dir) = self.path.parent() {
+            fs::remove_dir_all(dir).await?;
+        }
 
         Ok(())
     }

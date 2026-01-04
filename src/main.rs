@@ -43,6 +43,7 @@ async fn main() {
     // command invocation
     let result = match &args.command {
         Command::Keep(cmd) => cmd.run(&mut db).await,
+        Command::Burn(cmd) => cmd.run(&mut db).await,
         Command::Mailbox(cmd) => cmd.run(&mut db).await,
     };
 

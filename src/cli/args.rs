@@ -1,4 +1,4 @@
-use crate::commands::{KeepCmd, MailboxCmd};
+use crate::commands::{BurnCmd, KeepCmd, MailboxCmd};
 
 use clap::{Parser, Subcommand};
 
@@ -19,4 +19,6 @@ pub enum Command {
     Keep(KeepCmd),
     /// Visit your mailbox.
     Mailbox(MailboxCmd),
+    /// Burns the mailbox forever.
+    Burn(BurnCmd),
 }

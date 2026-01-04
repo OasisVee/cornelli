@@ -1,7 +1,9 @@
 // command use for easy access throughout the entire codebase
+pub mod burn;
 pub mod keep;
 pub mod mailbox;
 
+pub use burn::BurnCmd;
 pub use keep::KeepCmd;
 pub use mailbox::MailboxCmd;
 
