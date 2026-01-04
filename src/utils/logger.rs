@@ -51,8 +51,8 @@ fn type_out(s: &str, ms: u64) {
     let mut out = io::stdout();
 
     for c in s.chars() {
-        out.write_all(c.to_string().as_bytes()).unwrap();
-        out.flush().unwrap();
+        out.write_all(c.to_string().as_bytes()).unwrap_or_default();
+        out.flush().unwrap_or_default();
         sleep(Duration::from_millis(ms));
     }
     println!()

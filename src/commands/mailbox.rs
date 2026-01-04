@@ -28,7 +28,7 @@ impl Runnable for MailboxCmd {
 
         for capsule in db.capsules.iter() {
             if capsule.is_awaiting_decryption()?
-                && let Ok((decrypted, index)) = db.decrypt(&capsule)
+                && let Ok((decrypted, index)) = db.decrypt(capsule)
             {
                 pending.insert(index, decrypted);
             }

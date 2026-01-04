@@ -68,11 +68,13 @@ impl ChristmasDB {
     }
 
     /// Returns the path of the database instance.
+    #[must_use] 
     pub fn path(&self) -> &PathBuf {
         &self.path
     }
 
     /// Returns a reference vector to all capsules.
+    #[must_use] 
     pub fn list_capsules(&self) -> &[Capsule] {
         &self.capsules
     }
