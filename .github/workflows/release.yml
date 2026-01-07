@@ -34,12 +34,18 @@ jobs:
   build-unix:
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        include:
+          - os: ubuntu-latest
+            asset_name: cornelli-linux-x86_64.tar.gz
+          - os: macos-latest
+            asset_name: cornelli-darwin-aarch64.tar.gz
+          - os: macos-12
+            asset_name: cornelli-darwin-x86_64.tar.gz
 
     runs-on: ${{ matrix.os }}
 
     env:
-      FILE_NAME: target/release/cornelli-${{ matrix.os }}.tar.gz
+      FILE_NAME: target/release/${{ matrix.asset_name }}
 
     steps:
       - name: Checkout
